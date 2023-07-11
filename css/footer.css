@@ -42,7 +42,9 @@
         justify-content: space-between;
     }
     .footer__navegacion{
-        text-align: left;
-        min-width: 600px;
+        font-size: 1.2rem;
+        text-align: center;
+        justify-content: center;
+        min-width: 75vw;
     }
 }

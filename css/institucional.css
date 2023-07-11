@@ -49,22 +49,22 @@
     display: block;
 }
 
-.institucional__video{
+.institucional__video {
     width: 95vw;
 }
 
 @media screen and (min-width: 1024px){
     .institucional__contenido{
-        width: 100%;
+        width: 75vw;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         text-align: left;
     }
 
     .institucional__video{
-        align-self: flex-end;
-
-        width: 375px;
+        /*align-self: flex-end;*/
+        width: 37.5vw;
     }
 
     .institucional__contacto-correo{
