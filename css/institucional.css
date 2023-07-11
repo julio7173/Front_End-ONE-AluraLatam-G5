@@ -43,12 +43,12 @@
     line-height: normal;
 }
 
-.institucional__contacto-email {
+.institucional__contacto-correo {
     color: var(--fuente-ceniza-oscuro);
     text-decoration: underline;
     display: block;
 }
 
 .institucional__video {
-    width: 100vw;
+    width: 95vw;
 }
