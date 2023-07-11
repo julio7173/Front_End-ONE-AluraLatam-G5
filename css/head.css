@@ -1,4 +1,4 @@
-.head {
+.head{
     color: #FFFFFF;
 
     width: 100%;
@@ -17,15 +17,15 @@
     position: absolute;
 }
 
-.head__logo {
+.head__logo{
     margin-bottom: 1rem;
 }
 
-.head__navegacion {
+.head__navegacion{
     text-align: center;
 }
 
-.head__enlace {
+.head__enlace{
     font-size: 1.1rem;
 
     display: inline-block;
@@ -33,4 +33,12 @@
     margin-right: .7rem;
     margin-bottom: .7rem;
     margin-left: .7rem;
+}
+
+@media screen and (min-width: 1024px){
+    .head{
+        flex-direction: row;
+        justify-content: space-between;
+        border: none;
+    }
 }
