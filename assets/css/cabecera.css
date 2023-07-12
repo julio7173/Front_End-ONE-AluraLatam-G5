@@ -6,3 +6,12 @@
     padding-left: 2rem;
     padding-right: 2rem;
 }
+
+@media screen and (min-device-width: 375px) and (max-device-width: 768px) {
+    .cabecera{
+        flex-direction: column;
+        font-size: 2rem;
+        text-align: center;
+        padding: 0;
+    }
+}

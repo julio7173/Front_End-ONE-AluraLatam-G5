@@ -2,3 +2,10 @@
     padding: 5rem;
     text-align: center;
 }
+
+@media screen and (min-device-width: 375px) and (max-device-width: 768px) {
+    .quienes{
+        padding: 2rem;
+        text-align: center;
+    }
+}

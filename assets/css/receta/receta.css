@@ -12,3 +12,9 @@
     font-size: 1.1625rem;
     transform: scale(1.15rem);
 }
+
+@media screen and (min-device-width: 375px) and (max-device-width: 768px) {
+    .receta{
+        width: auto;
+    }
+}
