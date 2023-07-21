@@ -1,26 +1,31 @@
-( () => {const btn = document.querySelector("[data-form-btn]");
+( () => {
+        const btn = document.querySelector("[data-form-btn]");
 
         const createTask = (evento) => {
             evento.preventDefault();
             const input = document.querySelector("[data-form-input]");
             const value = input.value;
             input.value = "";
+
             const list = document.querySelector("[data-list]");
+
             const task = document.createElement("li");
             task.classList.add("card");
+
             const taskContent = document.createElement("div");
             taskContent.appendChild(checkComplete());
+
             const tittleTask = document.createElement("span");
             tittleTask.classList.add("task");
             tittleTask.innerText = value;
+
             taskContent.appendChild(tittleTask);
-            const content = `<i class="fas fa-trash-alt trashIcon icon"></i>`;
+
             task.appendChild(taskContent);
+            task.appendChild(deleteIcon());
             list.appendChild(task);
-            console.log(value);
         ;}
 
-        console.log(btn);
         btn.addEventListener("click", createTask);
 
         const checkComplete = () => {
@@ -35,5 +40,17 @@
             element.classList.toggle("fas");
             element.classList.toggle("completeIcon");
             element.classList.toggle("far");
+        }
+
+        const deleteIcon = () => {
+            const i = document.createElement("i");
+            i.classList.add("fas", "fa-trash-alt", "trashIcon", "icon");
+            i.addEventListener("click", deleteTask);
+            return i;
+        }
+
+        const deleteTask = (event) => {
+            const parent = event.target.parentElement;
+            parent.remove();
         }
     })();
