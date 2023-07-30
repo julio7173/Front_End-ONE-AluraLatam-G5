@@ -2,7 +2,7 @@ import { clientServices } from "../services/client-service.js";
 
 const formulario = document.querySelector("[data-form]");
 
-const obtenerInformacion = () => {
+const obtenerInformacion = async () => {
     const url = new URL(window.location);
     const id = url.searchParams.get("id");
 
@@ -13,10 +13,17 @@ const obtenerInformacion = () => {
         window.location.href = "../screens/error.html"
     }
 
-    clientServices.detalleCliente(id).then(perfil => {
-        nombre.value = perfil.nombre;
-        email.value = perfil.email;
-    });
+    try{
+        const perfil = await clientServices.detalleCliente(id)
+        if(perfil){
+            nombre.value = perfil.nombre;
+            email.value = perfil.email;
+        }else{
+            throw new error();
+        }
+    }catch(error){
+        window.location.href = "../screens/error.html"
+    }
 }
 
 obtenerInformacion();
